@@ -3,7 +3,7 @@ Wow an amazing place to stay, this is all that is needed to become the programme
 
 This is a directory in a 'REPO' just know that.
 
-### WHAT YOU WILL GET HERE
+# WHAT YOU WILL GET HERE
 * This Directory is the First shell project for working with ALX
 
 * This directory contains all the basics activities for shell performance
