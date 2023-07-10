@@ -6,12 +6,12 @@ RWX = 421
 ```
 # LISTED BELOW ARE THE TASKS AND THIER DESCRIPTIONS
 ```
-* 0. creates a script thats switches current user to betty
-* 1. creates a script that prints the effective username of the current user.
+- 0. creates a script thats switches current user to betty
+- 1. creates a script that prints the effective username of the current user.
 
-* 2. creates a script that prints all the groups the current user is part of.
+- 2. creates a script that prints all the groups the current user is part of.
 
-* 3. creates a script that changes the owner of the file hello to the user betty.
+- 3. creates a script that changes the owner of the file hello to the user betty.
 
 - 4. creates a script that creates an empty file called hello.
 
