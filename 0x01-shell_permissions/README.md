@@ -1,5 +1,5 @@
 # INTRODUCTION
-* This is a directory designed for shell permissions.
+This is a directory designed for shell permissions. All answers are included here
 ```
 The perfect shell owner permission is 777
 RWX = 421
