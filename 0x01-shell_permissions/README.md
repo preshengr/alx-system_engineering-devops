@@ -1,11 +1,11 @@
 # INTRODUCTION
 * This is a directory designed for shell permissions.
-'''
+```
 The perfect shell owner permission is 777
 RWX = 421
-'''
+```
 # LISTED BELOW ARE THE TASKS AND THIER DESCRIPTIONS
-'''
+```
 * 0. creates a script thats switches current user to betty
 * 1. creates a script that prints the effective username of the current user.
 
@@ -40,4 +40,4 @@ RWX = 421
 - 16. Write a script that changes the owner of the file hello to betty only if it is owned by the user guillaume.
 
 - 17. script that will play the StarWars IV episode in the terminal.
-'''
+```
