@@ -1,7 +1,7 @@
 # WELCOME
 * This is another directory which is containing the projects designed and created in ALX.
 # WHATS IN FOR YOU
-_Files below have been created through the linux terminal to my github repo.
+_Files below have been created through the linux terminal to my github repo._
 ```
 0 alias a script that creates an alias.
 1-hello you a script that prints hello user
