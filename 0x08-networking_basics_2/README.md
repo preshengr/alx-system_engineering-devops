@@ -13,4 +13,4 @@ These files can be used as guides or references for understanding and performing
 
 ## License
 
-The content of this directory is provided under the license specified in the repository.
+The content of this directory is provided under the license specified in the repository
