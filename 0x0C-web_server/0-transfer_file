@@ -16,4 +16,4 @@ echo "Transferring file to $server_ip..."
 # Use scp to transfer file to the user home directory on the server
 scp -o StrictHostKeyChecking=no -i "$ssh_key" "$file_path" "$username@$server_ip:~/"
 
-echo "File transferred successfully!
+echo "File transferred successfully!"
