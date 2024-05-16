@@ -1,5 +1,6 @@
 # Share your SSH client configuration
 
-Host 54.209.72.4
+Host *
 	PasswordAuthentication no
 	IdentityFile ~/.ssh/school
+	HostbasedAuthentication no
