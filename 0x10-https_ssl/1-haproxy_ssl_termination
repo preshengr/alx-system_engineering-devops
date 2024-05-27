@@ -41,7 +41,7 @@ frontend proama-frontend
         default_backend proama-backend
 
 frontend proama-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/proama.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend proama-backend
 
