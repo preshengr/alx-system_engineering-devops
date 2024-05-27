@@ -73,3 +73,4 @@ This project is licensed to ALX Holberton School.
 3. **Improved User Trust**: By securing web applications with HTTPS, programmers can enhance user trust and confidence in the safety and privacy of their interactions with the application.
 4. **Prevention of Man-in-the-Middle Attacks**: SSL/TLS encryption prevents attackers from intercepting and tampering with communications between clients and servers, mitigating the risk of man-in-the-middle attacks.
 5. **SEO Benefits**: Websites using HTTPS receive a boost in search engine rankings, leading to increased visibility and traffic, which can benefit businesses and organizations.
+
