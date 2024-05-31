@@ -1,0 +1,107 @@
+Here's a schema illustrating the flow of the request when you type `https://www.google.com` in your browser and press Enter:
+
+```plaintext
++------------------+                               +---------------------+                               +--------------------+
+|                  |                               |                     |                               |                    |
+|      Browser     |                               |     DNS Server      |                               |     Firewall       |
+|                  |                               |                     |                               |                    |
++--------+---------+                               +----------+----------+                               +----------+---------+
+         |                                                   |                                                   |
+         | (1) DNS Query: https://www.google.com             |                                                   |
+         +--------------------------------------------------->                                                   |
+         |                                                   |                                                   |
+         |                                                   | (2) DNS Response: IP Address of Google Server     |
+         |<--------------------------------------------------+                                                   |
+         |                                                                                                       |
+         | (3) HTTPS Request: https://www.google.com                                                               |
+         +------------------------------------------------------------------------------------------------------->|
+         |                                                                                                       |
+         |                                                                                                       |
+         +-------------------------------------------------------------------------------------------------------+
+         | (4) HTTPS Request: https://www.google.com                                                             |
+         +--------------------------------------------->                                                         |
+         |                                             |                                                         |
+         |                                             |                                                         |
++--------v---------+                            +------+---------+                                     +--------+-------+
+|                  |                            |                |                                     |                |
+| Load Balancer    |                            |   Google Web   |                                     |   Database     |
+|                  |                            |     Server     |                                     |    Server      |
++--------+---------+                            |                |                                     |                |
+         |                                      +--------+-------+                                     +--------+-------+
+         |                                               |                                                    /       \
+         | (5) Distributes Request to Appropriate Server |                                                   /         \
+         +----------------------------------------------->| (6) Web Server generates response                /           \
+         |                                               +----------------------------+                    /             \
+         |                                                                                +---------------/               \
++--------v---------+                                                                   +--v---------+               +------v------+
+|                  |                                                                   |            |               |             |
+|    Application   |                                                                   |   Database |               | Application |
+|      Server      |                                                                   |    Server  |               |   Server    |
+|                  |                                                                   |            |               |             |
++--------+---------+                                                                   +------------+               +-------------+
+         |                                                                                 ^
+         | (7) Generates Web Page using data from DB                                      |
+         +--------------------------------------------->                                   |
+         |                                                                                 |
+         |                                                                                 |
+         +--------------------------------------------->                                   |
+         |                                                                                 |
+         +---------------------------------------------> (8) Fetch Data from DB            |
+         |                                                                                 |
+         |<--------------------------------------------------------------------------------+
+         | (9) Sends Data to App Server
+         +---------------------------------------------> (10) App Server sends Response to Web Server
+         |                                                                                 
+         |                                                                                 
+         |                                                                                 
++--------v---------+                            +------+---------+                         
+|                  |                            |                |                             
+|   Load Balancer  |                            |  Google Web    |                         
+|                  |                            |    Server      |                         
++--------+---------+                            |                |                         
+         |                                      +--------+-------+                         
+         |                                               |                                 
+         |                                               |                                 
+         +----------------------------------------------->| (11) Web Server sends Response to Browser                               
+         |                                               +--------------------------------+                                                                          
+         |                                                                                                       
+         +------------------------------------------------------------------------------------------------------>                                      
++--------v---------+                            
+|                  |                            
+|      Browser     |                            
+|                  |                            
++------------------+                            
+```
+
+### Explanation:
+
+1. **DNS Resolution:**
+   - The browser sends a DNS query to resolve the domain name (`https://www.google.com`) into an IP address.
+   - The DNS server responds with the IP address of the Google server.
+
+2. **Initial HTTPS Request:**
+   - The browser sends an HTTPS request to the resolved IP address, which is encrypted.
+
+3. **Firewall:**
+   - The request passes through a firewall which ensures security and filters the traffic.
+
+4. **Load Balancer:**
+   - The request is distributed by a load balancer to one of the available Google web servers.
+
+5. **Web Server:**
+   - The web server processes the request and if necessary, interacts with an application server to generate the web page.
+
+6. **Application Server:**
+   - The application server processes any business logic required to generate the web page.
+   - If the application server needs data, it queries the database server.
+
+7. **Database Server:**
+   - The database server processes the query from the application server and returns the necessary data.
+
+8. **Returning the Data:**
+   - The application server uses the data from the database to generate the final response.
+
+9. **Serving the Web Page:**
+   - The web server sends the generated web page back to the browser via the load balancer and firewall.
+
+This sequence ensures secure, efficient, and scalable delivery of the web page requested by the user.
