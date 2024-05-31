@@ -13,8 +13,8 @@ Here's a schema illustrating the flow of the request when you type `https://www.
          |                                                   | (2) DNS Response: IP Address of Google Server     |
          |<--------------------------------------------------+                                                   |
          |                                                                                                       |
-         | (3) HTTPS Request: https://www.google.com                                                               |
-         +------------------------------------------------------------------------------------------------------->|
+         | (3) HTTPS Request: https://www.google.com                                                             |
+         +------------------------------------------------------------------------------------------------------>|
          |                                                                                                       |
          |                                                                                                       |
          +-------------------------------------------------------------------------------------------------------+
@@ -30,7 +30,7 @@ Here's a schema illustrating the flow of the request when you type `https://www.
          |                                      +--------+-------+                                     +--------+-------+
          |                                               |                                                    /       \
          | (5) Distributes Request to Appropriate Server |                                                   /         \
-         +----------------------------------------------->| (6) Web Server generates response                /           \
+         +---------------------------------------------->| (6) Web Server generates response                /           \
          |                                               +----------------------------+                    /             \
          |                                                                                +---------------/               \
 +--------v---------+                                                                   +--v---------+               +------v------+
@@ -40,7 +40,7 @@ Here's a schema illustrating the flow of the request when you type `https://www.
 |                  |                                                                   |            |               |             |
 +--------+---------+                                                                   +------------+               +-------------+
          |                                                                                 ^
-         | (7) Generates Web Page using data from DB                                      |
+         | (7) Generates Web Page using data from DB                                       |
          +--------------------------------------------->                                   |
          |                                                                                 |
          |                                                                                 |
@@ -62,7 +62,7 @@ Here's a schema illustrating the flow of the request when you type `https://www.
          |                                      +--------+-------+                         
          |                                               |                                 
          |                                               |                                 
-         +----------------------------------------------->| (11) Web Server sends Response to Browser                               
+         +---------------------------------------------->| (11) Web Server sends Response to Browser                               
          |                                               +--------------------------------+                                                                          
          |                                                                                                       
          +------------------------------------------------------------------------------------------------------>                                      
