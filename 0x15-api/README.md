@@ -61,4 +61,4 @@ Licensed to ALX - Holberton School
 
 ## Authors
 
-- Precious Okwukwe Amaechi[A[A[A[A[A
+- Precious Okwukwe Amaechi
